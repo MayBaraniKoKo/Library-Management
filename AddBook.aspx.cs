@@ -16,7 +16,7 @@ namespace LibraryManagement
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            DBAcme DB = (DBAcme)Session["DB"];
+             DBAcme DB = (DBAcme)Session["DB"];
 
             string BookName = bookName.Text;
             string BookDetails = bookDetails.Text;
@@ -27,8 +27,9 @@ namespace LibraryManagement
             string image = FileUpload1.FileName;
             FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Images/" + image));
             string Image = "~/Images/" + image.ToString();
-            int numrow = DB.InsertBook(BookName, BookDetails, Author, Publication, Price, Quantity, Quantity, image);
-            showMessage.Text = "Book added successfully!";
+            
+            int numrow = DB.InsertBook(BookName, BookDetails, Author, Publication, Price, Quantity, Quantity, image,isbn.Text);
+            showMessage.Text = "Book added successfully!";;
         }
     }
 }
