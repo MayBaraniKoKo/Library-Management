@@ -1,13 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="AddBook.aspx.cs" Inherits="LibraryManagement.AddBook" %>
+<%@ Page Title="AddBook" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="AddBook.aspx.cs" Inherits="LibraryManagement.AddBook" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-horizontal">
+
     <h2><strong>Add New Book</strong></h2>
      <hr />
-    
+    <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="isbn" CssClass="col-md-2 control-label">ISBN</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="isbn" CssClass="form-control" />
+            </div>
+        </div>
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="bookName" CssClass="col-md-2 control-label">Book Name</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="bookName" CssClass="form-control" />
+                <asp:TextBox runat="server" ID="bookName" CssClass="form-control" TextMode="MultiLine" />
             </div>
         </div>
         <div class="form-group">
@@ -47,10 +53,10 @@
                 <asp:FileUpload ID="FileUpload1" runat="server" CssClass="form-control" />
             </div>
          </div>
-
+        
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" Text="Add" CssClass="btn btn-default" ID="btnAdd" OnClick="btnAdd_Click"/>
+                <asp:Button runat="server" Text="Add" CssClass="btn btn-default" ID="btnAdd" OnClick="btnAdd_Click" style="background-color:#617129; color:white;"/>
             </div>
         </div>
         <hr />
