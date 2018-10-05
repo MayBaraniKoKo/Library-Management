@@ -17,14 +17,13 @@ namespace LibraryManagement.Account
         protected void Button1_Click(object sender, EventArgs e)
         {
             DBAcme DB = (DBAcme)Session["DB"];
-
             string name = fullName.Text;
             string pass = password.Text;
             string conPassword = confirmPassword.Text;
             string mail = email.Text;
             string Phone = phone.Text;
-            int Postal = Convert.ToInt32(postalcode.Text);
-            int numrow = DB.InsertUser(mail, name, pass, conPassword, Phone, Postal);
+            string studentID = studentid.Text;
+            int numrow = DB.InsertStudent(studentID,name, mail, pass, conPassword, Phone);
             Response.Redirect("/Account/Login");
             Session["reg"] = "Registered";
             
