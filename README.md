@@ -4,8 +4,23 @@ Library Management system is a project that manages all the activities of the li
 # Development
 The library management system is developed on Microsoft Visual Studio Ultimate 2013. The language that we used in this project is asp.net c#.
 
-# Environment Settings
+# System Requirements
+  Processor: Intel Pentium
+  Ram: 500 MB
+  Hard disk space: 200 MB
+  Display: 800x600 
 
-
-
-
+# Features
+- Register
+- Login
+- Add Publication(Admin)
+- Add Books(Admin)
+- Borrow Books(Admin)
+- Add Students(Admin)
+- Reurn Books(Admin)
+- Penalty Reports(Admin)
+- Manage Account(Student)
+- Borrow Book(Student)
+- Book Reports(Student)
+- Penalty Status(Student)
+- FeedBack(Students)
